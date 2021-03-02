@@ -15,7 +15,7 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \c@part=\count80
 \c@section=\count81
 \c@subsection=\count82
-\c@subsubsection=\count83
+\c@subsubsection=\count83csdcsdsdcdscs
 \c@paragraph=\count84
 \c@subparagraph=\count85
 \c@figure=\count86
