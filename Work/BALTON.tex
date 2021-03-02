@@ -1,0 +1,151 @@
+%==============================================================================
+% Homework Template
+%==============================================================================
+\newcommand{\myname}{ZZZ}
+\newcommand{\myclass}{ZZZZ}
+\newcommand{\myclassfull}{ZZZZ}
+\newcommand{\mysemester}{ZZZ}
+
+\newcommand{\myhw}{Homework 1}
+
+%==============================================================================
+% Formating Macros 
+%==============================================================================
+
+% The first header on the first page
+\newcommand{\myheader}
+{\vspace*{-0.5in}
+\noindent
+{\bf {\myclassfull} \hfill {\mysemester}}
+\noindent
+\rule[8pt]{\textwidth}{1pt}
+\vspace{1ex} 
+}
+
+% Running head (goes at top of each page, beginning with page 2.
+% Must be preceded by \pagestyle{myheadings}.
+\newcommand{\myrunninghead}
+{\vspace*{-0.5in}
+\noindent
+{\bf{\myclass} \hfill {\myname}}
+\noindent
+\rule[8pt]{\textwidth}{1pt}
+\vspace{1ex}
+}
+
+% The title
+\newcommand{\myhwtitle}
+{\begin{center}
+{\Large {\bf {\myhw}}}\\
+\bigskip 
+{\large {\bf {\myname}}}
+\end{center}
+}
+
+%==============================================================================
+% Formatting parameters.
+%==============================================================================
+
+\documentclass[12pt]{article}
+\oddsidemargin=0in						% Left margin minus 1 inch.
+\evensidemargin=0in						% Same for even-numbered pages.
+\textwidth=6.5in						% Text width (8.5in - margins).
+\topmargin=-0.3in							% Top margin minus 1 inch.
+\headsep=0.2in							% Distance from header to body.
+\textheight=8.5in							% Body height (incl. footnotes)
+\skip\footins=4ex						% Space above first footnote.
+\hbadness=10000							% No "underfull hbox" messages.
+
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{latexsym}
+\usepackage{graphicx}
+
+%==============================================================================
+% Macros.
+%==============================================================================
+\newcommand{\new}[1]{{\em #1\/}}			% New term (set in italics).
+\newcommand{\set}[1]{\{#1\}}				% Set (as in \set{1,2,3})
+\newcommand{\setof}[2]{\{\,{#1}|~{#2}\,\}}	% Set (as in \setof{x}{x > 0})
+\newcommand{\C}{\mathbb{C}}	                % Complex numbers.
+\newcommand{\N}{\mathbb{N}}                 % Positive integers.
+\newcommand{\Q}{\mathbb{Q}}                 % Rationals.
+\newcommand{\R}{\mathbb{R}}                 % Reals.
+\newcommand{\Z}{\mathbb{Z}}                 % Integers.
+\newcommand{\compl}[1]{\overline{#1}}		% Complement of ...
+
+% Skip a line    
+\newcommand{\vs}[1]{\vspace*{#1\baselineskip}}  
+
+% Nice two part definition
+\newcommand{\twopartdef}[4]					
+{
+	\left
+		\begin{array}{ll}
+			#1 & \mbox{if } #2 \
+			#3 & \mbox{if } #4
+		\end{array}
+	\right.
+}
+
+% New problem on the same page
+\newcommand{\problems}[1]{
+\par
+\vspace{\baselineskip}
+\noindent
+{\bf{Problem #1.}}
+}
+
+% Problem goes on a new page with the header above it
+\newcommand{\problem}[1]{
+\clearpage
+\myrunninghead
+\noindent
+{\bf{Problem #1.}}
+}
+
+% Part a) of a problem
+\newcommand{\ppart}[1]{
+\par
+\vspace{\baselineskip}
+\noindent
+\emph{#1)}
+}
+
+% Manually insert this at the beginning of a new page because:
+% 1) \markright doesn't take two lines as argument
+% 2) \myheadings style puts page number at the top
+\newcommand{\mynewpage}{ 
+\newpage
+\myrunninghead
+}
+
+%==============================================================================
+% Begin the document
+%==============================================================================
+
+\begin{document}
+	
+\myheader
+
+\pagestyle{plain}
+
+\myhwtitle
+
+\bigskip
+
+%==============================================================================
+% Red
+%==============================================================================
+
+%==============================================================================
+% Solutions go here
+%==============================================================================
+
+\problems{1}
+
+
+
+%==============================================================================
+% End the document
+%==============================================================================
+\end{document}
